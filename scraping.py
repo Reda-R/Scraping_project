@@ -1,7 +1,7 @@
 import os
 import json
 
-input_file = open('data.json', 'r')
+input_file = open('./json/data.json', 'r')
 #convert json to list
 conv = json.load(input_file)
 
@@ -83,7 +83,6 @@ def check_without_s():
             file.close()
         else:
             print(url_without_s, 'is not working!')
-
         pos += 1
 
 
