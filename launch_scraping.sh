@@ -12,11 +12,11 @@ python3 scraping.py
 
 sleep 2s
 
-mv ./json/data.json ./json/.old_json
+mv ./.tmp_json/data.json ./.old_files
 
 sleep 2s
 
-mv ./csv/data.csv ./csv/.old_csv
+mv ./csv/data.csv ./.old_files
 
 sleep 2s
 
