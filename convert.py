@@ -2,7 +2,7 @@ import csv
 import json
 
 csvfile = open('./csv/data.csv', 'r')
-jsonfile = open('./json/data.json', 'w')
+jsonfile = open('./.tmp_json/data.json', 'w')
 jsonfile.write('[')
 
 fieldnames = ("web-scraper-order", "web-scraper-start-url", "url_link", "url-href")

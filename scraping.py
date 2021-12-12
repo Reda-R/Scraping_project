@@ -1,7 +1,7 @@
 import os
 import json
 
-input_file = open('./json/data.json', 'r')
+input_file = open('./.tmp_json/data.json', 'r')
 #convert json to list
 conv = json.load(input_file)
 
@@ -11,43 +11,12 @@ links = [my_list['url-href'] for my_list in conv]
 
 #list to str
 #faire la modif pour toute les pages
-list_to_str_page0 = '!++delim++!'.join(links)
-str_to_list_page1 = list_to_str_page0.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/1/?")
-
-#-----------------------
-
-list_to_str_page1 = ''.join(str_to_list_page1)
-str_to_list_page2 = list_to_str_page1.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/2/?")
-
-list_to_str_page2 = ''.join(str_to_list_page2)
-str_to_list_page3 = list_to_str_page2.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/3/?")
-
-list_to_str_page3 = ''.join(str_to_list_page3)
-str_to_list_page4 = list_to_str_page3.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/4/?")
-
-list_to_str_page4 = ''.join(str_to_list_page4)
-str_to_list_page5 = list_to_str_page4.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/5/?")
-
-list_to_str_page5 = ''.join(str_to_list_page5)
-str_to_list_page6 = list_to_str_page5.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/6/?")
-
-list_to_str_page6 = ''.join(str_to_list_page6)
-str_to_list_page7 = list_to_str_page6.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/7/?")
-
-list_to_str_page7 = ''.join(str_to_list_page7)
-str_to_list_page8 = list_to_str_page7.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/8/?")
-
-list_to_str_page8 = ''.join(str_to_list_page8)
-str_to_list_page9 = list_to_str_page8.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/9/?")
-
-
-#-----------------------
+list_to_str = '!++delim++!'.join(links)
+str_to_list = list_to_str.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/1/?")
 
 #Parser les liens et enlever 'https://www.' | 'http://www.' | 'www.' | 'https://' | 'http://'
-list_to_str0 = ''.join(str_to_list_page9)
-str_to_list0 = list_to_str0.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/")
 
-list_to_str1 = ''.join(str_to_list0)
+list_to_str1 = ''.join(str_to_list)
 str_to_list1 = list_to_str1.split("https://www.")
 
 list_to_str2 = ''.join(str_to_list1)
