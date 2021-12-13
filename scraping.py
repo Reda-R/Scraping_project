@@ -11,12 +11,9 @@ links = [my_list['url-href'] for my_list in conv]
 
 #list to str
 #faire la modif pour toute les pages
-list_to_str = '!++delim++!'.join(links)
-str_to_list = list_to_str.split("https://www.afnic.fr/noms-de-domaine/tout-savoir/annuaire-bureaux-enregistrement/page/1/?")
 
 #Parser les liens et enlever 'https://www.' | 'http://www.' | 'www.' | 'https://' | 'http://'
-
-list_to_str1 = ''.join(str_to_list)
+list_to_str1 = '!++delim++!'.join(links)
 str_to_list1 = list_to_str1.split("https://www.")
 
 list_to_str2 = ''.join(str_to_list1)
